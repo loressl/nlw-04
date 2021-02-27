@@ -3,7 +3,7 @@
     align-items: center;
     font-family: Rajdhani;
     font-weight: 600;
-    color: var(--title);
+    color: var(--blud-dark2);
 }
 
 .countDownContainer > div{
@@ -51,7 +51,7 @@
     border-radius: 5px;
 
     background: var(--button-begin);
-    color: var(--text-higjlight);
+    color: var(--white);
 
     font-size: 1.25rem;
     font-weight: 600;

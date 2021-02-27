@@ -18,3 +18,13 @@
     height: 100%;
     width: 90%;
 }
+
+@media(max-width:1080px) {
+    .container section{
+        grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    }
+
+    .container section > div img{
+        width: 70%;
+    }
+}

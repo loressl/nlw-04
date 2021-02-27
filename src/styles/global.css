@@ -5,10 +5,11 @@
 }
 
 :root {
-    --white: #361A99;
-    --background: #4a30a3;
+    --blud-dark2:#361A99;
+    --white: #fff;
+    --background: #7160aa;
     --gray-line: #DCDDE0;
-    --text: #c4c4c4;
+    --text: #aca9a9;
     --text-higjlight: #B3B9FF;
     --title: #E2DCE5;
     --red: #E83F5B;
@@ -17,9 +18,9 @@
     --blue: #91035f;
     --blue-dark: #ff038f;
     --blue-twitter: #2aa9e0;
-    --button:#660139;
-    --button-begin:#193b14;
-    --button-begin-hover:#3F9432;
+    --button:#aa035c;
+    --button-begin:#573a88;
+    --button-begin-hover:#9c56ec;
 }
 
 @media(max-width:1080px) {
