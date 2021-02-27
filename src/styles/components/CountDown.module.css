@@ -50,8 +50,8 @@
     border: 0;
     border-radius: 5px;
 
-    background: var(--blue);
-    color: var(--white);
+    background: var(--button-begin);
+    color: var(--text-higjlight);
 
     font-size: 1.25rem;
     font-weight: 600;
@@ -60,17 +60,17 @@
 }
 
 .countDownButton:not(:disabled):hover{
-    background: var(--blue-dark);
+    background: var(--button-begin-hover);
 }
 
 .countDownButtonActive{
-    background: var(--white);
+    background: var(--button);
     color:var(--title)
 }
 
 .countDownButtonActive:not(:disabled):hover{
     background: var(--red);
-    color:var(--white)
+    color:var(--title)
 }
 
 .countDownButton:disabled{

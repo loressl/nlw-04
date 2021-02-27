@@ -1,0 +1,50 @@
+.loginBoxContainer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+}
+
+.loginBoxContainer img {
+    background-size: 300px 50px;
+    flex: 0.4;
+}
+
+.loginBoxContainer strong {
+    font-size: 2rem;
+}
+
+.loginBoxGithub {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 60px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.loginBoxGithub p {
+    flex: 3;
+    width: 254px;
+    height: 60px;
+    font-size: 1.2rem;
+    text-align: justify;
+    padding-left: 1rem;
+}
+
+.loginBoxInput {
+    display: flex;
+    flex-direction: row;
+}
+
+.loginBoxInput input {
+    position: absolute;
+    width: 340px;
+    height: 80px;
+    background: linear-gradient(90deg, #593db4 0%, rgba(104, 112, 201, 0.89) 100%);
+    border-radius: 5px 0px 0px 5px;
+    color: var(--gray-line);
+    text-align: center;
+}
