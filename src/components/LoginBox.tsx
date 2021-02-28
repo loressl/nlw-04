@@ -1,8 +1,33 @@
-import { useState } from 'react'
+import { useContext, useEffect } from 'react'
+import Notiflix from 'notiflix'
+import { useRouter } from 'next/router'
+
+import { LoginContext } from '../contexts/LoginContext'
 import styles from '../styles/components/LoginBox.module.css'
 
 export function LoginBox() {
-    const [username, setUsername] = useState('')
+    const {
+        username,
+        setUsername,
+        searchUser,
+        validUsername
+    } = useContext(LoginContext)
+
+    const router = useRouter()
+
+    useEffect(() => {
+        if (validUsername === 'error') {
+            Notiflix.Report.Failure(
+                'Erro',
+                'Username inválido. Confira seus dados.',
+                'Ok');
+        } else {
+            router.push({
+                pathname: '/challenge',
+                query: { username: username }
+            })
+        }
+    }, [validUsername])
 
     return (
         <div className={styles.loginBoxContainer}>
@@ -16,11 +41,12 @@ export function LoginBox() {
                 <input
                     placeholder="Digite seu username"
                     value={username}
-                    onChange={(event)=>setUsername(event.target.value)}
+                    onChange={(event) => setUsername(event.target.value)}
                 />
                 <button
                     type="button"
-                    className={username !== '' ? styles.loginBoxButtonActive: styles.loginBoxButtonInative}
+                    onClick={searchUser}
+                    className={username !== '' ? styles.loginBoxButtonActive : styles.loginBoxButtonInative}
                 >
                     <img src="/icons/arrow.svg" alt="Enter" />
                 </button>

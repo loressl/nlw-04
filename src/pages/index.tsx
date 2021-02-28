@@ -2,6 +2,7 @@ import Head from 'next/head'
 
 import styles from '../styles/pages/Login.module.css'
 import { LoginBox } from '../components/LoginBox'
+import { LoginProvider } from '../contexts/LoginContext'
 
 export default function Login(props) {
 
@@ -14,9 +15,11 @@ export default function Login(props) {
         <div>
           <img src={'/symbol.svg'} alt="Símbolo" />
         </div>
-        <div>
-          <LoginBox />
-        </div>
+        <LoginProvider>
+          <div>
+            <LoginBox />
+          </div>
+        </LoginProvider>
       </section>
     </div>
   )

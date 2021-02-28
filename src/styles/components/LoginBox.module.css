@@ -8,7 +8,7 @@
 }
 
 .loginBoxContainer img {
-    flex: 0.4;
+    flex: 0.5;
 }
 
 .loginBoxContainer strong {
@@ -72,7 +72,7 @@
     background: #4CD62B;
 }
 
-@media(max-width:1080px) {
+@media(max-width:720px) {
     .loginBoxContainer img {
         flex: 0.6;
     }
