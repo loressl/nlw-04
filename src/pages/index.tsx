@@ -15,11 +15,9 @@ export default function Login(props) {
         <div>
           <img src={'/symbol.svg'} alt="Símbolo" />
         </div>
-        <LoginProvider>
           <div>
             <LoginBox />
           </div>
-        </LoginProvider>
       </section>
     </div>
   )

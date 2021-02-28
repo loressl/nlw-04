@@ -31,7 +31,6 @@ interface ChallengesProviderProps {
 
 export const ChallengesContext = createContext({} as ChallengesContextData)
 
-
 export function ChallengesProvider({ children, ...rest }: ChallengesProviderProps) {
     const [level, setLevel] = useState(rest.level ?? 1)
     const [currentExperience, setCurrentExperience] = useState(rest.currentExperience ?? 0)
@@ -78,6 +77,9 @@ export function ChallengesProvider({ children, ...rest }: ChallengesProviderProp
 
     function resetChallenge() {
         setActiveChallenge(null)
+        Cookies.remove('level')
+        Cookies.remove('currentExperience')
+        Cookies.remove('challengesCompleted')
     }
 
     function completeChallenge() {

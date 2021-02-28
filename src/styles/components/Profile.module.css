@@ -1,5 +1,6 @@
 .profileContainer{
     display: flex;
+    flex-direction: row;
     align-items: center;
 }
 
@@ -11,6 +12,7 @@
 
 .profileContainer div{
     margin-left: 1.5rem;
+    flex: 1;
 }
 
 .profileContainer div strong{
@@ -27,6 +29,21 @@
 
 .profileContainer div p img{
     margin-right: 0.5rem;
+}
+
+.profileContainer button{
+    background: transparent;
+    border: 0;
+}
+
+.profileContainer button:active{
+    height: 35px;
+    width: 35px;
+}
+
+.profileContainer button img{
+    height: 35px;
+    width: 35px;
 }
 
 @media(max-width:1080px) {
