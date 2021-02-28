@@ -22,7 +22,7 @@ export function LoginBox() {
                 'Username inválido. Confira seus dados.',
                 'Ok');
         } else if(username !== '' && validUsername !== 'error') {
-            router.push({
+            router.replace({
                 pathname: '/challenge',
             })
         }
