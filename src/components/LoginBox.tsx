@@ -39,7 +39,7 @@ export function LoginBox() {
             <div className={styles.loginBoxInput}>
                 <input
                     placeholder="Digite seu username"
-                    value={username}
+                    value={String(username)}
                     onChange={(event) => setUsername(event.target.value)}
                 />
                 <button
