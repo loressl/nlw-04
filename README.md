@@ -4,8 +4,13 @@
 
     -A ideia do projeto é que a cada 25 minutos o usuário realize uma atividade que é escolhida de forma aleatória. 
     A cada atividade completada, pontos serão adicionados. 
+    
+<h3>Tecnologias utilizadas</h3>
+    
+    -React
+    -Next
 
-<h3>Funcionalidade adicionada:</h3>
+<h3>Funcionalidade adicionada</h3>
     
     -Login pelo username do github
     
