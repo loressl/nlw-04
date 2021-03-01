@@ -2,7 +2,6 @@ import { createContext, ReactNode, useCallback, useEffect, useState } from "reac
 import { getUser } from '../service/users'
 import { useRouter } from 'next/router'
 import Cookies from 'js-cookie'
-import { AxiosResponse } from 'axios'
 
 interface LoginContextData {
     username: String;

@@ -7,7 +7,7 @@ export async function getUser(username: String) {
         const data = response.data
         return data
     } catch (error) {
-        if(error && error.response){
+        if (error && error.response) {
             const axiosError = error as AxiosError
             return axiosError.response.data
         }

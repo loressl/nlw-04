@@ -41,22 +41,22 @@ export function ChallengesProvider({ children, ...rest }: ChallengesProviderProp
 
     const experienceToNextLevel = Math.pow((level + 1) * 4, 2)
 
-    useEffect(()=>{
+    useEffect(() => {
         Notification.requestPermission()
-    },[])
+    }, [])
 
-    useEffect(()=>{
+    useEffect(() => {
         Cookies.set('level', String(level))
         Cookies.set('currentExperience', String(currentExperience))
         Cookies.set('challengesCompleted', String(challengesCompleted))
-    },[level, currentExperience, challengesCompleted])
+    }, [level, currentExperience, challengesCompleted])
 
     function levelUp() {
         setLevel(level + 1)
         setIsLevelUpModalOpen(true)
     }
 
-    function closeLevelUpModal(){
+    function closeLevelUpModal() {
         setIsLevelUpModalOpen(false)
     }
 
@@ -68,9 +68,9 @@ export function ChallengesProvider({ children, ...rest }: ChallengesProviderProp
 
         new Audio('/notification.mp3').play()
 
-        if(Notification.permission === 'granted'){
-            new Notification('Novo desafio',{
-                body:`Valendo ${challenge.amount}xp!`
+        if (Notification.permission === 'granted') {
+            new Notification('Novo desafio', {
+                body: `Valendo ${challenge.amount}xp!`
             })
         }
     }
@@ -91,14 +91,14 @@ export function ChallengesProvider({ children, ...rest }: ChallengesProviderProp
 
         let finalExperience = currentExperience + amount
 
-        if(finalExperience >= experienceToNextLevel){
+        if (finalExperience >= experienceToNextLevel) {
             finalExperience = finalExperience - experienceToNextLevel
             levelUp()
         }
 
         setCurrentExperience(finalExperience)
         setActiveChallenge(null)
-        setChallengesCompleted(challengesCompleted+1)
+        setChallengesCompleted(challengesCompleted + 1)
     }
 
     return (

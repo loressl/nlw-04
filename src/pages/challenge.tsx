@@ -8,7 +8,6 @@ import { ExperienceBar } from '../components/ExperienceBar'
 import { Profile } from '../components/Profile'
 import { CountDownProvider } from '../contexts/CountDownContext'
 import { ChallengesProvider } from '../contexts/ChallengesContext'
-import { LoginProvider } from '../contexts/LoginContext'
 
 import styles from '../styles/pages/Challenge.module.css'
 
@@ -32,11 +31,11 @@ export default function Challenge(props: ChallengeProps) {
                 <ExperienceBar />
                 <CountDownProvider>
                     <section>
-                            <div >
-                                <Profile />
-                                <CompletedChallenges />
-                                <CountDown />
-                            </div>
+                        <div >
+                            <Profile />
+                            <CompletedChallenges />
+                            <CountDown />
+                        </div>
                         <div>
                             <ChallengeBox />
                         </div>
