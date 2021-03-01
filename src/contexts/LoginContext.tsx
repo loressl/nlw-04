@@ -2,6 +2,7 @@ import { createContext, ReactNode, useCallback, useEffect, useState } from "reac
 import { getUser } from '../service/users'
 import { useRouter } from 'next/router'
 import Cookies from 'js-cookie'
+import { AxiosResponse } from 'axios'
 
 interface LoginContextData {
     username: String;
@@ -25,19 +26,19 @@ export function LoginProvider({ children }: LoginProviderProps) {
     const router = useRouter()
 
     useEffect(() => {
-        setName(Cookies.get('name'))
-        setUsername(Cookies.get('username'))
+        setName(Cookies.get('name') === undefined ? '' : Cookies.get('name'))
+        setUsername(Cookies.get('username') === undefined ? '' : Cookies.get('username'))
     }, [])
 
     const searchUser = useCallback(() => {
-        getUser(username).then(response => {
-            if (response !== 'error') {
-                setValidUsername(String(response.status))
-                setName(response.data.name)
-                Cookies.set('name', String(response.data.name))
+        getUser(username).then((response) => {
+            if (response.message !== 'Not Found') {
+                setValidUsername(String(200))
+                setName(response.name)
+                Cookies.set('name', String(response.name))
                 Cookies.set('username', String(username))
             } else {
-                setValidUsername(response)
+                setValidUsername('error')
             }
         })
     }, [username])
