@@ -17,4 +17,4 @@
 
 <h3>Telas</h3>
 
-<img src="screens/moveit.mp4" width="750px" height="550px">
+<img src="screens/moveit.gif" width="900px" height="500px">
