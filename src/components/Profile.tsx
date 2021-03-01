@@ -1,4 +1,4 @@
-import { useCallback, useContext, useEffect } from 'react'
+import { useCallback, useContext } from 'react'
 import { ChallengesContext } from '../contexts/ChallengesContext'
 import { LoginContext } from '../contexts/LoginContext'
 import styles from '../styles/components/Profile.module.css'
@@ -7,10 +7,10 @@ export function Profile() {
     const { level, resetChallenge } = useContext(ChallengesContext)
     const { username, name, exit } = useContext(LoginContext)
 
-    const logout = useCallback(()=>{
+    const logout = useCallback(() => {
         resetChallenge()
         exit()
-    },[])
+    }, [])
 
     return (
         <div className={styles.profileContainer}>
